@@ -29,28 +29,5 @@ This script is particularly useful for:
 
 ---
 
-## Usage Example
-
-```python
-import requests
-from shutil import copyfile
-from distutils.dir_util import copy_tree
-
-# Download a file from Google Drive (replace with your own URL)
-file_url = "Path"
-
-r = requests.get(file_url, stream=True)
-
-with open("Path/aclImdb.zip", "wb") as file:
-    for block in r.iter_content(chunk_size=1024):
-        if block:
-            file.write(block)
-
-# Unzip the downloaded file into a directory
-!unzip "Path/Multi_Label_dataset.zip" -d "/content/drive/MyDrive/UnMulti/"
-
-# Copy a single file from source to destination
-copyfile("Path/coco_Dataset", "Path/MS_COCO")
-
-# Copy all contents from one directory to another
-copy_tree("Path/Video2images", "Path/Video_Images")
+## Usage 
+Files Transfer
